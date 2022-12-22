@@ -1,7 +1,7 @@
 **1. Botnet ---> short for *'robot network'***
 * A piece of malware that infects a computer to carry out commands under the remote control of the attacker
 * Group of internet connected devices such as servers, PCs, mobile devices, etc that are affected and controlled by malware
-* Used for stealing data, sending spam, performing DDoS attack and more, and also to enable the user to acess the device and its connection 
+* Used for stealing data, sending spam, performing DDoS attack and more, and also to enable the user to access the device and its connection 
 * Under the control of a single attacking party, known as the **bot-herder or bot master**
 * common botnet actions 
     * Email Spam
