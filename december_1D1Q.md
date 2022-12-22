@@ -26,3 +26,50 @@
 ![botnet](images/botnet-infrastructure.png)
 
 ![botnet 2](images/botnet-2.png)
+
+<br>
+
+**2. Difference between hashing and enryption**
+
+*Encryption*
+* two way function where data is passed in as plaintext and comes out as ciphertext
+* can be reversed or decrypted 
+* process of encoding simple text and other information that can be accessed by the sole authorized entity if it has a decryption key 
+* number of encryption systems:
+    1. Asymmetric encryption : public-key encryption 
+        * deploys two key public and private 
+        * slower than symmetric encryption and consumes more processing power when encrypting data 
+    2. Symmetric encryption: 
+        * same secret key to encrypt and decrypt the message 
+        * both sender and the receiver should have the key 
+        * oldest technique of encryption 
+
+**Purpose of Encryption**
+* Protect data from an unauthorized person who wants to read or get the information 
+* Confidentiality 
+* Granular access control : user are limited to what they can see and do 
+* Authentication: the origin of the message received can be traced 
+
+Examples : AES is symmetric encryption, PGP is an example of an asymmetric encryption algorithm
+    
+
+*Hashing*
+* also called **digest**
+* a number generated from a string of text
+* one way meaning the plaintext is scrambled into a unique digest through the use of a salt that cannot be decrypted 
+* Technically hashing can be reversed but the computational power needed to decrypt it makes decryption infeasible 
+* hashing will take arbitrary input and produce a string with a fixed length
+* a hash algorithm is a function that can be used to map out data of random size to data of fixed size 
+* hash values, hash codes and hash sums are returned by functions during hashing 
+
+* **Types of hashing algorithms**
+    * MD4 : Ronald Rivest , 128 bits length 
+    * SHA Algorithm : Secure Hash Algorithm designed by NSA , 160 bits lenght, SHA, SHA-1, SHA-2 (256 bit) are different versions 
+    * RIPMEND
+
+**Purpose of hashing**
+1. Compare large amount of data, it's easier comparing hashes than the data itself 
+2. Used in Cryptographic applications like a digital signatures 
+3. used to generate random strings to avoid duplication of data stored in databases 
+
+![hashing v encryption](images/hashing%20vs%20encryption.png)
