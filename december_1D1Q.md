@@ -64,7 +64,7 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 
 * **Types of hashing algorithms**
     * MD4 : Ronald Rivest , 128 bits length 
-    * SHA Algorithm : Secure Hash Algorithm designed by NSA , 160 bits lenght, SHA, SHA-1, SHA-2 (256 bit) are different versions 
+    * SHA Algorithm : Secure Hash Algorithm designed by NSA , 160 bits length, SHA, SHA-1, SHA-2 (256 bit) are different versions 
     * RIPMEND
 
 **Purpose of hashing**
@@ -73,3 +73,22 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 3. used to generate random strings to avoid duplication of data stored in databases 
 
 ![hashing v encryption](images/hashing%20vs%20encryption.png)
+
+**3. PGP :-Pretty Good Privacy -- Philip R. Zimmermann**
+* Encryption program or application that implements the OpenPGP public key cryptography standard
+* used to encrypt and decrypt email, authenticate messages with digital signatures  and encrypted stored files 
+* Original PGP was offered in two versions :
+    * Using the RSA for key exchange 
+    * Using the Diffie-Hellman for key exchange 
+* PGP concepts 
+    * Alice and Bob 
+    * Web of Trust 
+    * Implict Trust : Alice has vetted Bob -- willing to assert (through her own signature) that she found Bob to be who he says he is and that the email and key pair are under Bob's control
+    * Explict Trust: Occurs when Carlos, a third generic user is willing to trust Alice's judgement about other individuals 
+    * Key Signing 
+    * ASCII armor:- also known as Radix-64 encoding is a way of formatting encrypted data in a printable format 
+    * Session Key : symmetric encryption key used for just one encryption session
+
+![pgp](images/pgp.png)
+
+* [Additional information](https://www.varonis.com/blog/pgp-encryption) 
