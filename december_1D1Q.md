@@ -92,3 +92,17 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 ![pgp](images/pgp.png)
 
 * [Additional information](https://www.varonis.com/blog/pgp-encryption) 
+
+**4.Radix -64 Encoding**
+* Radix 64 or base 64 is a binary-to-text encoding system that is designed to allow binary data to be represented in ASCII string format 
+* allows binary data stored in octets (i.e.bytes to be expressed as printable characters)
+* requires the binary input to be split into block of 6
+* which are then mapped onto a character set of printable characters 
+* Radix-64 characterset includes 
+    * A-Z
+    * a-z
+    * 0-9
+    * the additional characters '+' and '/' 
+* results in 33% more bytes -- every 3 input bytes is converted to 4 output 
+
+![Radix-64 example](images/Radix-64%20eg.png)
