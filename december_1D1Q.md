@@ -106,3 +106,34 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 * results in 33% more bytes -- every 3 input bytes is converted to 4 output 
 
 ![Radix-64 example](images/Radix-64%20eg.png)
+
+**5. SSL/TLS**
+**Secure Sockets Layer**
+* standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems 
+* preventing adversary from reading and modifying any information transferred including personal details, payment information etc 
+* Uses encryption algorithms to scramble data in transit 
+* SSL is installed on the server side but there are visual cues on the browser 
+    * https:// at the start of the web address 
+* Certificate Authorities (CAs) can also authenticate the identity of the owner of website
+    * Domain Validation Certificates : control over domain name
+    * Organization Validation Certificates: not only domain name, prove that the company is registered and legally accountable as a business 
+    * Extended Validation Certificates : 
+
+**Transport Layer Security**
+* Updated more secure version of SSL 
+* most up tp date TLS certificates with the option of ECC, RSA or DSA encryption 
+
+![additional info](https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https)
+
+* Difference between SSL and TLS 
+
+| SSL   |   TLS |
+| ----- | ----- |
+| supports the Fortezza algorithm | does not support the Fortezza algorithm|
+| the message digest is used to create a master secret | a Pseudo-random function is used to create a master secret|
+| Message Authentication Code protocol is used | Hashed Message Authentication Code Protocol is used |
+| more complex than TLS | Simple |
+| less secured | provides high security|
+| less reliable and slower | highly reliable and upgraded, provides less latency |
+| uses port to set up explicit connection | uses protocol to set up implicit connection| 
+
