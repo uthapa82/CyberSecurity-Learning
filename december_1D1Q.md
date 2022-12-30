@@ -137,3 +137,16 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 | less reliable and slower | highly reliable and upgraded, provides less latency |
 | uses port to set up explicit connection | uses protocol to set up implicit connection| 
 
+**6. How does SSL/TLS Encryption Work**
+* Uses both asymmetric and symmetric encryption to protect the confidentiality and integrity of data-in-transit 
+* asymmetric encryption is used to establish a secure session between client and a server 
+* symmetric encryption is used to exchange data 
+    * The client contact the server using a secure URL (Https)
+    * server sends the client its certificate and public key 
+    * client verifies this with a Trusted Root Certification Authority to ensure the certificate is legitimate 
+    * client and server negotiate the strongest type of encryption that each can support 
+    * client encrypts a session(secret) key with the server's public key and sends it back to the server 
+    * the server decrypts the client communication with its private key and the session is established 
+    * the session key(symmetric encryption) is now used to encrypt and decrypt data transmitted between the client and server 
+
+* Both client and server are now using HTTPS(SSL/TLS + HTTP) for their communication 
