@@ -123,7 +123,7 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 * Updated more secure version of SSL 
 * most up tp date TLS certificates with the option of ECC, RSA or DSA encryption 
 
-![additional info](https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https)
+[additional info](https://www.websecurity.digicert.com/security-topics/what-is-ssl-tls-https)
 
 * Difference between SSL and TLS 
 
@@ -150,3 +150,15 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
     * the session key(symmetric encryption) is now used to encrypt and decrypt data transmitted between the client and server 
 
 * Both client and server are now using HTTPS(SSL/TLS + HTTP) for their communication 
+
+**7. Difference between RSA and Diffe-Hellman Key Exchange**
+* DH approach generates a public and private key on both sides of the transaction but only shares the public key 
+* DH is  also known as an exponential key exchange 
+
+* ![DH](images/DH.png)
+
+* Standard for generating a session key in public 
+* High processor overhead 
+* Not used for bulk or stream encryption but rather to create the initial session key for starting the encrypted session
+
+[more-info](https://www.encryptionconsulting.com/diffie-hellman-key-exchange-vs-rsa/)
