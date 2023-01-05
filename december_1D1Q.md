@@ -162,3 +162,7 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 * Not used for bulk or stream encryption but rather to create the initial session key for starting the encrypted session
 
 [more-info](https://www.encryptionconsulting.com/diffie-hellman-key-exchange-vs-rsa/)
+
+* DH Mathematically helps two parties which involves in the communication to generate a Secret key (symmetric key) at each side which are identical and same , this key is used for encryption and decryption at both sides 
+
+* RSA mathematically helps two parties which involves in the communication to generate a pair of keys(public and private) at each side, where public key is used for encrypt and private key is used for decryption 
