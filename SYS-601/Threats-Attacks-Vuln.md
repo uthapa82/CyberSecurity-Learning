@@ -206,3 +206,183 @@
         - fool deployed algorithms 
 
 *Q1. Dan is engaging in a password cracking attack where he uses precomputed hash values. What type of attack is Dan Waging ? ==> Rainbow Table*
+
+**6. Understanding Vulnerability types**
+* Vulnerability Impact 
+    - CIA (confidentiality, Integrity, Availability)
+    - Data breach are violations of confidentiality 
+    - Data exfiltration removes sensitive information from an organization's control 
+    - DDoS attacks seek to undermine availability 
+    - Financial risks, Reputational risk, Strategic risk : jeopardizes the ability to meet major goals and objectives 
+    - Operational risk affects the ability to carry out day-to-day activities 
+    - Compliance risk : potential violations of laws or regulations 
+
+* Supply Chain vulnerabilities 
+    - End of Life announcement
+    1. End-of-sale : product will no longer be offered for purchase but the vendor will support existing customers 
+    2. End-of-support : vendor will reduce or eliminate support for existing users of the product 
+    3. End-of-life : the vendor will no longer provide any support or updates for the product 
+
+* Configuration vulnerabilities 
+    - defaults passwords, or  unsecured root accounts 
+    - cryptographic vulnerabilities 
+        - weak cipher suites 
+        - weak cryptographic protocol implementations 
+        - poor key management 
+        - poor certificate management 
+        - Patch management 
+            - Operating systems, application, firmware
+        - Account management : permissions assigned to accounts to prevent accidental or intentional misuse 
+        - Leat Privilege: limit user permissions 
+
+* Architectural vulnerabilities 
+    - IT architecture: processes and practices used to design system 
+    - Incorporate Security early, avoid bolt-on security requirements 
+    - System Sprawl: new devices are connected to a network, but old devices are not promptly disconnected, leading to security vulnerabilities 
+    - System sprawl is even more risky when assets are undocumented 
+
+*Q1. Data breaches violate confidentiality*
+
+**7. Vulnerability Scanning**
+* Vulnerability management : detects, remediates and reports vulnerabilities 
+    - Linux kernel contains over 24 million lines of code 
+    - thousands of lines change everyday 
+* Vulnerability Patching Process
+    1. the company learns of a vulnerability 
+    2. developers analyze the issue and develop a patch 
+    3. the company releases the patch to customers 
+    4. Customers apply the patch to remediate the vulnerability 
+* Why manage vulnerabilities ? 
+    - Maintain system security 
+    - comply with corporate policy 
+    - comply with regulatory requirements 
+    - **PCI DSS Requirements**
+        - conduct quartely internal and external vulnerability scans 
+        - repeat scans after any significant change 
+        - use an approved scanning vendor (ASV)
+        - remediate and rescan until you achieve a clean report 
+    - **FISMA Requirements**
+        - Conduct vulnerability scans regularly 
+        - Analyze the results of scans 
+        - Remediate legitimate vulnerabilities 
+        - Share information with other agencies 
+* Network Vulnerability Scans 
+* Application Scans 
+* Web Application Scans 
+* Supplement vulnerability scans with configurations and log reviews (for false positives)
+* Asset inventory : provides the starting point for vulnerability scanning 
+* **Nessus**, **Qualys** 
+* Impact, what is the highest data classification handled by the system 
+* Likelihood, what is the network exposure , what services are exposed 
+* Criticality : what impact does the system have on business operations ? 
+* Network location affects scan results 
+* Firewall settings, IDS/IPS rules and network segmentation all impact scan results 
+* Agent-based scanning: installs software on each target device 
+* Credentialed Scanning : uses password to log into system 
+* Severe, Critical, Urgent 
+* SCAP - Security Content Automation Protocol 
+    - SCAP components 
+    1. Common Vulnerability Scoring System (CVSS)
+    - Scores vulnerabilities on a 10-point scale 
+    - Metrics used to determine the scale 
+
+    *Attack Vector(AV)*
+    |Rating | Description|
+    |-------|---------|
+    | Physical (P) | Physical touch/manipulation is required|
+    |Local(L)| Physical or logical console access is required|
+    |Adjacent Network(A)|Local network access is required |
+    |Network (N) | Remotely exploitable vulnerability | 
+
+    *Attack Complexity (AC)*
+    |Rating|Description|
+    |----------|------------|
+    |High (H)| Requires specialized conditions|
+    |Low(L) | Does not require specialized conditions|
+
+    *Privileges Required (PR)*
+    |Rating|Description|
+    |--------------|--------------|
+    |High(H)| Requires administrative control|
+    |Low(L) | Requires basic user privileges |
+    |None(N)| Requires no prior privileges|
+
+    *User Interaction (UI)*
+    |Rating|Description|
+    |-------|-------|
+    |Required(R)| Requires that a user take some action|
+    |None(N)| Does not require user interaction|
+
+
+    * The AV,AC, PR and UI metrics combine to describe the exploitability of a vulnerability 
+    
+    *Confidentiality (C)*
+    |Rating|Description|
+    |-----|------|
+    |None(N)| No confidentiality impact|
+    |Low(L)|Access to some information is possible|
+    |High(H)| All information is compromised|
+
+    *Integrity (I)*
+    |Rating|Description|
+    |------|------|
+    |None(N)|No integrity impact|
+    |Low(L)|Modification of some information is possible |
+    |High(H)| All information is compromised|
+
+    *Availability (A)*
+    |Rating|Description|
+    |------|-----|
+    |None(N)| No availability impact |
+    |Low(L)| Performance is degraded|
+    |High(H)|The system is shut down|
+
+    * The C, I , A metrics combine to describe the impact of a vulnerability 
+
+    *Scope(S)
+    |Rating|Description|
+    |------|------|
+    |Changed(C)| Exploiting the vulnerability can affect other components|
+    |Unchanged(U)| Exploiting the vulnerability only affects resources managed by the same security authority|
+
+    2. Common Configuration Enumeration (CCE)
+    3. Common Platform Enumeration (CPE)
+    4. Common Vulnerabilities and Exposures (CVE)
+    5. Extensible Configuration Checklist Description Format (XCCDF)
+    6. Open Vulnerability and Assessment Language (OVAL)
+
+* Analyzing Scan reports 
+    - Prioritization Factors 
+        1. Vulnerability Severity 
+        2. System Criticality 
+        3. Information Sensitivity 
+        4. Remediation difficulty 
+        5. System Exposure 
+
+* Vulnerability Validation 
+    - Confirms accuracy 
+    - Is the report a false positive ? 
+    
+    ![Vulnerability-outcomes](./images/vulnerability-outcomes.png)
+
+* Correlating Scan Results 
+    - Consult industry standards, best practices and compliance requirements 
+    - PCI DSS CVVSS Scores 
+
+    ![PCI DSS](./images/PCI-DSS.png)
+
+    - Technical Information sources 
+        - Configuration Management Systems 
+        - Log Repositories 
+        - Other Data Sources 
+
+    - Trend Analysis (Tenable Security Center)    
+
+*Q1. As Dave works with his colleagues in other IT disciplines, he notices that they use different names to refer to the same products and vendors. Which SCAP component would best assist him in reconciling these differences? => Common Platform Enumeration (CPE)*
+
+*Q2. Helen has vulnerability scanners located at several points on her network. Which one of the following scanners is likely to provide the most complete picture of the vulnerabilities present on a public web server? => DMZ Scanner*
+
+*Q3. Renee is creating a prioritized list of scanning targets. Which one of the following is the least important criteria for her prioritization? => Operating System options: Network Exposure, Information Sensitivity, Services installed*
+
+*Q4. What CVSS value is the threshold at which PCI DSS requires remediation to achieve a passing scan? => 4*
+
