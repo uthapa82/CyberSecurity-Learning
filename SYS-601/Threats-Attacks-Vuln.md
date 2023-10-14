@@ -120,3 +120,89 @@
 1. Basic principle underlying threat hunting activities ==> assumption of compromise 
 2. Best assists with the automation of security workflows ==> SOAR 
 3. STIX is a standardized language used to communicate security information between systems and organizations 
+
+**4. Social Engineering Attacks**
+* Authority 
+    - People defer to authority 
+    - Shock 
+* Intimidation : scaring people 
+* Consensus 
+    - Social proof 
+    - The herd mentality 
+* Scarcity 
+    - Getting the last one 
+* Urgency 
+    - Time is running out 
+* Familiarity 
+    - liking 
+* Spam
+    - Unsolicited commercial email (UCE) 
+    - phising subcategory of spam 
+    - prepending attacks seek to impersonate security filters 
+    - Spear phishing: targeted attack 
+    - Whaling: targeted attacks on executives 
+        - Subpoena fake court orders 
+    - Pharming :using fake websites, typosquatting, dns poisoning 
+    - Vishing : voice phishing 
+    - Smishing and SPIM : SMS and IM spam
+    - Spoofing: faking an identity 
+* Pretexting Attacks: impersonating a customer 
+* Watering hole: (animal gathering for water)
+    - users trust the websites they visit, to some extent 
+    * browsers and add-ons often have vulnerabilities 
+    * Client side vulnerabilities 
+    * Users are conditioned to click OK on security warnings 
+    * Black listing blocks known malware sites 
+
+* How a watering hole attack works 
+    1. identify and compromise a highly targeted website 
+    2. choose a client exploit and bundle in a botnet 
+    3. place the malware on the compromised website
+    4. Sit back and wait for infected systems to phone home 
+
+* Shoulder surfing, dumpster diving, tailgating, 
+
+*Q1. What type of website does the attacker use when waging a watering hole attack ? => Site trusted by the end user*
+
+*Q2. In what technique do attackers pose as their victim to elicit information from third parties ? => pretexting*
+
+**5. Common Attacks**
+* Password attacks  
+    - /etc/passwd: password file in linux
+    - /etc/shadow: Shadow file can only be accesed by superuser 
+    - hash function: mathematical function that converts a variable-length input into a fixed-length output 
+        - must produce a completely different output for each input 
+        - must be computationally difficult to retrieve the input from the output 
+        - must be computationally difficult to find two different inputs that generate the same output (collision)
+
+    - **The Birthday Problem**
+        - Collisions become common with large samples 
+    
+    - Cracking passwords 
+    - Brute force attacks: try all possibilities
+    - Dictionary Attacks 
+    - Hybrid Attacks: add varitions to tries 
+    - Rainbow Table Attack : Precomputes hashes 
+
+    ```
+    $ sudo useradd matt
+    $ sudo passwd matt 
+    $ sudo ./unshadow /etc/passwd /etc/shadow > passwords(file-name)
+    ```
+
+* Password spraying and credential stuffing 
+    - Exploit common passwords 
+    - Possible because of reused passwords 
+    - MFA 
+
+* Machine Learning 
+    - Discover knowledge in Data 
+    - Simulate human thought 
+    - Predictive analytics 
+    - Prescriptive analytics : simulation to optimize our behavior
+    - Adversarial AI : Exploit AI techniques 
+        - breach confidentiality of machine learning algorithms 
+        - inject tainted data into training processes 
+        - fool deployed algorithms 
+
+*Q1. Dan is engaging in a password cracking attack where he uses precomputed hash values. What type of attack is Dan Waging ? ==> Rainbow Table*
