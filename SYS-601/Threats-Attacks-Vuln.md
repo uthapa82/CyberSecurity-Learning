@@ -386,3 +386,34 @@
 
 *Q4. What CVSS value is the threshold at which PCI DSS requires remediation to achieve a passing scan? => 4*
 
+**8. Penetration Testing and Exercises**
+* The goal of a penetration test is to successfully defeat security controls 
+* Rules of Engagement (ROE) before begining a pen test 
+* White Box : Attackers have fill access to information before they begin the test 
+* Black Box : Attackets have no information about the target before they begin the test (simulating external attack)
+* Grey Box: Attackers have limited information before they begin the test 
+* NIST 
+    - Discovery Phase --> Attack Phase[ Gaining Access --> Escalating privileges --> system Browsing (Lateral movement) --> Install Additional Tools]
+    - Warflying takes wardriving to the air with dromes and UAVs 
+    
+    |Pivot| Persistence|
+    |-----|-----|
+    | After exploiting a vulnerability in a system, attackers use that system as a base from which to target other systems on the same local network| After exploiting a vulnerability in a system, attackers install tools on that system to allow future access- even if the initial vulnerability is corrected | 
+
+* Clean up at the end of the test 
+
+* Bug Bounty 
+    - Open Security testing 
+    - self-managed and fully-managed bounty programs 
+
+* Cybersecurity exercises may use competitive format 
+    - identify vulnerabilities in system 
+    - provide participants with hands-on experience attacking and securing system
+    
+    |Red Team| Blue Team | White Team|
+    |------|------|--------|
+    | Attackers who will try to undermine security | Defenders who will secure the systems from attack| Observers and judges who manage the exercise |
+
+* Purple Team
+    - Combines knowledge from the red and the blue team during a lessons-learned session after the exercise 
+* Setting up a sandbox environment for cybersecurity exercises limits the risk to production systems 
