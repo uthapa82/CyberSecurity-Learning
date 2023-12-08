@@ -166,3 +166,79 @@ Examples : AES is symmetric encryption, PGP is an example of an asymmetric encry
 * DH Mathematically helps two parties which involves in the communication to generate a Secret key (symmetric key) at each side which are identical and same , this key is used for encryption and decryption at both sides 
 
 * RSA mathematically helps two parties which involves in the communication to generate a pair of keys(public and private) at each side, where public key is used for encrypt and private key is used for decryption 
+
+
+**8. Data Loss Prevention (DLP)**
+* Strategy that detects potential data breaches or data exfiltration transmissions and prevents them by monitoring, detecting and blocking sensitive data while in use (endpoint actions), in-motion(network traffic) and at rest (data storage)
+
+* Data Leakage Prevention 
+* Sensitive data, information must be protected against unauthorized access to safeguard the privacy or security of an individual or organization 
+* Health Records, Intellectual property, Credit card information 
+* implementing SIEM and IDS/IPS to protect coorporate data 
+* regulatory and compliance standards such as HIPAA, PCI-DSS, GDPR
+
+*How DLP System work*
+* DLP for the endpoint: Data residing on the desktop, lapotp, USB storafe, virtual desktops 
+* DLP at Rest or for storage: Ususally unstructured data residing on a server or structured data residing on Databases 
+* DLP for Network: Data that transits or leaves the network to the internet 
+* DLP for cloud : Data residing in Google Drive, office 365 email, personal email providers 
+
+![DLP](./images/DLP.png)
+
+Techniques used by DLP :
+
+* Pattern Matching
+    - content awarness and contextual analysis 
+    - capturing the envelope and analyzing the content 
+    - regular expressions (regex)
+    - most common pattern detected by a DLP is the SSN 
+
+* Fingerprinting
+    - algorithms that map data such as documents and files to shorter text strings 
+    - Document fingerprinting is especially useful for identifying sensitive data within forms including:
+        - Government forms such as tax documents 
+        - HIPAA and other regulatory compliance forms 
+        - Employee documentation forms used by finance or human resources 
+
+* Symantec DLP :
+    - Exact Data Matching (EDM) - detects content by fingerprinting structured data sources, including databases, directory servers, or other structured data files 
+
+    - Index Document Matching (IDM) 
+        - detect confedential data stored in unstructured data, including Microsofy office documents: PDFs and binary files such as JPEGs, CAD designs, and multimedia files 
+        - also detects "derived" content such as text that has been copied from a source document to another file 
+
+
+*Top DLP Best practices*
+1. Identify the Crown Jewels 
+    - Top-down approach
+    - Input form technical leaders shared during the maturation of the DLP program in order to enhance value and creativity 
+
+2. Research Multiple Vendors 
+    -  Satisfaction with Support, incident, workflow and overall confidence level 
+    - Gartner can also be used as a reference to determin the performance of the DLP vendor 
+
+3. Define Incident Response and Remediation 
+    - The downfall of DLP installations is poor planning for incident triage 
+
+4. Crawl, Walk, and Run 
+    - do not boil the ocean right out of the gate 
+    - go for small wins instead of turning on every single policy checkbox available 
+    - otherwise it will overwhelm the system and inundate the system with massive amounts of incidents, therefore defeating the purpose of the investment 
+
+5. Perform a Proof of Concept Exercises 
+    - goal is to replicate functionality and test the feature sets 
+    - pilot program 
+    - test compliance needs and observe deficiencies in triage process 
+
+6. Identify the DLP stakeholders and support team   
+    - Managed Service Provider that speicalizes in DLP 
+
+7. Regularly inform stakeholders of the State of the DLP Program 
+    - informed of the state of the program
+    - Consider creating a DLP committee comprised of Executive leadership members and key business unit leaders 
+
+* A network security policy can be created to prevent file uploads to Gmail
+* The component utilized to enforce this would be data in motion, or DLP for Network
+
+![DLP framework](./images/DLP-framework.png)
+
